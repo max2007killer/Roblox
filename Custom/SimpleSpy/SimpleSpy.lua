@@ -15,7 +15,7 @@ local Players = game:GetService("Players")
 local CoreGui = game:GetService("CoreGui")
 local Highlight =
 	loadstring(
-		game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/highlight.lua")
+		game:HttpGet("https://raw.githubusercontent.com/KATERGaming/Roblox/main/Custom/SimpleSpy/highlight.lua")
 	)()
 
 ---- GENERATED (kinda sorta mostly) BY GUI to LUA ----
