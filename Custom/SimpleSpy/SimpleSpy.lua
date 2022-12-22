@@ -1,12 +1,4 @@
---[[
-    SimpleSpy v2.2 SOURCE
-    SimpleSpy is a lightweight penetration testing tool that logs remote calls.
-    Credits:
-        exx - basically everything
-        Frosty - GUI to Lua
-]]
 
--- shuts down the previous instance of SimpleSpy
 if _G.SimpleSpyExecuted and type(_G.SimpleSpyShutdown) == "function" then
 	print(pcall(_G.SimpleSpyShutdown))
 end
@@ -18,9 +10,6 @@ local Highlight =
 		game:HttpGet("https://raw.githubusercontent.com/KATERGaming/Roblox/main/Custom/SimpleSpy/highlight.lua")
 	)()
 
----- GENERATED (kinda sorta mostly) BY GUI to LUA ----
-
--- Instances:
 
 local SimpleSpy2 = Instance.new("ScreenGui")
 local Background = Instance.new("Frame")
@@ -209,7 +198,7 @@ Simple.BackgroundTransparency = 1
 Simple.Position = UDim2.new(0, 5, 0, 0)
 Simple.Size = UDim2.new(0, 57, 0, 18)
 Simple.Font = Enum.Font.SourceSansBold
-Simple.Text = "SimpleSpy"
+Simple.Text = "Katers Spy"
 Simple.TextColor3 = Color3.new(1, 1, 1)
 Simple.TextSize = 14
 Simple.TextXAlignment = Enum.TextXAlignment.Left
