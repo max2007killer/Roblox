@@ -451,7 +451,7 @@ Bind(10881694331, "N", 1)
 wait(0.1)
 Bind(5927871610, "M", 1)
 
-wihle true do 
+while true do
     wait(9999999999999999999)
     print("sturdy")
 end
