@@ -1,9 +1,9 @@
 local DiscordLib =
-    loadstring(game:HttpGet"https://raw.githubusercontent.com/KATERGaming/Script-Hub/main/Libery%202")()
+    loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
-local win = DiscordLib:Window("Discord")
+local win = DiscordLib:Window("discord library")
 
-local serv = win:Server("Credits", "")
+local serv = win:Server("Preview", "")
 
 local btns = serv:Channel("Buttons")
 
@@ -115,4 +115,4 @@ bnds:Bind(
 
 serv:Channel("by dawid#7205")
 
-local serv = win:Server("Kater Hub", "http://www.roblox.com/asset/?id=6862002726")
+win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
