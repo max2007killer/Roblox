@@ -452,6 +452,19 @@ wait(0.1)
 Bind(5927871610, "M", 1)
 
 while true do
-    wait(9999999999999999999)
-    print("sturdy")
+    local nigga = {
+     283861791,
+     201454243
+    }
+
+    for l, c in pairs(game.Players:GetPlayers()) do
+        if table.find(nigga,c.UserId) then
+            print("lol")
+        end
+    end
+    game.Players.PlayerAdded:Connect(function(plr)
+        if table.find(nigga,plr.UserId) then
+            print("lol")
+        end
+    end)
 end
