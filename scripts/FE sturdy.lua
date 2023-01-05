@@ -452,6 +452,7 @@ wait(0.1)
 Bind(5927871610, "M", 1)
 
 while true do
+    wait(5)
     local nigga = {
      283861791,
      201454243
