@@ -10,7 +10,7 @@ sound.SoundId = "rbxassetid://216917652"
 sound.Parent = game:GetService("SoundService")
 sound:Play()
 
-
+teleport = false
 
 wait()
 game.StarterGui:SetCore("SendNotification", {
@@ -25,15 +25,9 @@ print "================MADE BY TomQ#6764================"
 local heartbeat = game:GetService("RunService").Heartbeat
 spawn(function()
     while true do heartbeat:Wait()
-    for i,v in pairs(game.Players:GetPlayers()) do
-        if v == game.Players.LocalPlayer == false then
             game.Players.LocalPlayer.MaximumSimulationRadius = math.pow(math.huge,math.huge)*math.huge
-            game.Players.LocalPlayer.SimulationRadius = math.pow(math.huge,math.huge)*math.huge
-            v.MaximumSimulationRadius = 0
-            v.SimulationRadius = 0
+            sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.pow(math.huge,math.huge)*math.huge)
             game:GetService("RunService").Stepped:wait()
-    end
-end
 end
 end)
 
@@ -47,6 +41,7 @@ local sound2 = Instance.new("Sound")
 sound2.SoundId = "rbxassetid://3398620867"
 sound2.Parent = game:GetService("SoundService")
 if Chr ~= nil then
+if teleport == false then
 for index, part in pairs(game:GetDescendants()) do
 if part:IsA("BasePart" or "UnionOperation" or "Model") and part.Anchored == false and part:IsDescendantOf(game.Players.LocalPlayer.Character) == false and part.Name == "Torso" == false and part.Name == "Head" == false and part.Name == "Right Arm" == false and part.Name == "Left Arm" == false and part.Name == "Right Leg" == false and part.Name == "Left Leg" == false and part.Name == "HumanoidRootPart" == false then --// Checks Part Properties
     part.CFrame = CFrame.new(position) --TP Part To Mouse
@@ -60,6 +55,10 @@ if part:IsA("BasePart" or "UnionOperation" or "Model") and part.Anchored == fals
     bodyPos.Parent = part
     end
 end
+end
+else
+
+    Chr:MoveTo(position)
 end
 end
 end
@@ -91,6 +90,13 @@ execute = function(name)
     for index, part in pairs(game:GetDescendants()) do
     if part:IsA("BasePart" or "UnionOperation" or "Model") and part.Anchored == false and part:IsDescendantOf(game.Players.LocalPlayer.Character) == false and part.Name == "Torso" == false and part.Name == "Head" == false and part.Name == "Right Arm" == false and part.Name == "Left Arm" == false and part.Name == "Right Leg" == false and part.Name == "Left Leg" == false and part.Name == "HumanoidRootPart" == false then --// Checks Part Properties
     part.CFrame = CFrame.new(game.workspace[name].Head.Position) --TP Part To User
+    if spam == true and part:FindFirstChild("BodyGyro") == nil then
+    local bodyPos = Instance.new("BodyPosition")
+    bodyPos.Position = part.Position
+    bodyPos.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+    bodyPos.P = 1e6
+    bodyPos.Parent = part
+    end
     end
     end
 
@@ -357,6 +363,20 @@ end
 end
 end)
 
+local teleportplr = createSetting("Teleport Mode")
+teleportplr.MouseButton1Down:connect(function()
+teleport = not teleport
+    if teleport then
+        fade(teleportplr.Parent.label, 0.25, {TextColor3 = c3(52, 189, 98)})
+        sound:Play()
+    else
+        fade(teleportplr.Parent.label, 0.25, {TextColor3 = c3w})
+        sound:Play()
+       -- code to break the loop here
+    
+end
+end)
+
 createSetting("Remove Accessories Mesh").MouseButton1Down:connect(function()
     sound:Play()
 
@@ -430,15 +450,7 @@ createSetting("Check Other Players").MouseButton1Down:connect(function()
     sound:Play()
     g = 0
     spawn(function()
-        for i,v in pairs(game.Players:GetPlayers()) do
-            if v.SimulationRadius > 5555 then
-                g = g + 1
-                print(v.Name, "is using Unanchored To Player")
-                game:GetService("RunService").Stepped:wait()
-                
-        end
-    end
-    print ("Checked all players, found", g ,"using Unanchored To Player")
+    print ("Broken function.")
     end)
 end)
 
