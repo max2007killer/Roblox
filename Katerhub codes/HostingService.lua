@@ -7,5 +7,5 @@
         	Sound:Play()
         	messagebox("There is an active Live Event!                                                        Press OK to get started", "KaterHub - v0.1", 48)
         else
-           warn("[Katerhub]: There is currently no active Event.")
+           
         end      
