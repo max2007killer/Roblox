@@ -1,4 +1,4 @@
-        local event312465123 = false
+        local event312465123 = true
 
         if event312465123 == true then
         	local Sound = Instance.new("Sound", game.Workspace)
