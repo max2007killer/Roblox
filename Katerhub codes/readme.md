@@ -3,7 +3,7 @@ Goofy ahh sceenshot
 
 <img src="https://i.ibb.co/zJn6kz6/Katerhub-Png.png">
 
-## Main script
+## script
 
 ---
 
@@ -13,6 +13,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/KATERGaming/Roblox/ma
 
 Katerhub is getting updates Every Month!
 
-#### Ui Library
+---
+## Discord
+#### Server
+
+https://discord.gg/XkTZbeH5M8
+
+#### Profile
+
+
 
 ---
