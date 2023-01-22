@@ -3,7 +3,7 @@ Goofy ahh sceenshot
 
 <img src="https://i.ibb.co/zJn6kz6/Katerhub-Png.png">
 
-## Tutorial
+## Discord Server
 
 #### Ui Library
 
