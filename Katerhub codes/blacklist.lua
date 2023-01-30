@@ -1,2 +1,5 @@
-201454243,
-4141355229
+local blacklist = {
+  4141355229,
+}
+
+return blacklist;
