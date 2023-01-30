@@ -1,0 +1,4 @@
+local blacklistedUsers = {
+	2392979691,
+	935862376
+}
